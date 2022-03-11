@@ -9,6 +9,7 @@ let router = express.Router();
 router.get('/', (req, res) => res.json({ 'success': true }));
 
 app.use(router);
+app.use(require('cors')());
 
 require(path.join(__dirname, 'app', 'routes.js'))();
 
